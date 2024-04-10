@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 220 116" style="enable-background:new 0 0 220 116;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:url(#WhatsApp_Image_2023-09-21_at_13.05.02_00000155111443224879541810000004065133146813307046_);}
+</style>
+<pattern  x="-50.9" y="161.6" width="257.4" height="257.4" patternUnits="userSpaceOnUse" id="pattern" viewBox="21.3 -257.4 257.4 257.4" style="overflow:visible;">
+	<g>
+		<rect x="21.3" y="-257.4" class="st0" width="257.4" height="257.4"/>
+		
+			<image style="overflow:visible;enable-background:new    ;" width="1080" height="405" xlink:href="78BA7609.png"  transform="matrix(0.2864 0 0 -0.2864 0 -70.6805)">
+		</image>
+	</g>
+</pattern>
+<pattern  id="WhatsApp_Image_2023-09-21_at_13.05.02_00000006677737261653291090000003846422987331362710_" xlink:href="#pattern" patternTransform="matrix(0.8548 0 0 -0.8548 -985.8774 -15003.208)">
+</pattern>
+<rect id="WhatsApp_Image_2023-09-21_at_13.05.02" style="fill:url(#WhatsApp_Image_2023-09-21_at_13.05.02_00000006677737261653291090000003846422987331362710_);" width="220" height="116"/>
+</svg>

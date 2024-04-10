@@ -1,0 +1,38 @@
+//ANIMATIONS
+@keyframes fadeInDown
+    0%
+        opacity: 0
+        transform: translate3d(0, -100%, 0)
+
+    100%
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+
+@keyframes spin
+    100%
+        -webkit-transform: rotate(360deg)
+        transform: rotate(360deg)
+
+@keyframes falling
+    0%
+        top: 0%
+        left: -10%
+        opacity: 0
+        -webkit-transform: rotateZ(0deg)
+    25%
+        top: 30%
+        left: 90%
+        opacity: 1
+    50%
+        top: 60%
+        left: 5%
+        -webkit-transform: rotateZ(360deg)
+    75%
+        top: 80%
+        left: 80%
+        opacity: 1
+    100%
+        top: 100%
+        left: 20%
+        opacity: 0
+        -webkit-transform: rotateZ(0deg)

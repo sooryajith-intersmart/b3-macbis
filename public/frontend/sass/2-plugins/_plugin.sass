@@ -1,0 +1,358 @@
+//PLUGIN
+.visible, .invisible
+    opacity: 0.0
+    transition: opacity 0.5s ease
+
+.visible
+    opacity: 1.0
+
+// OWL CAROUSEL
+.owl-carousel
+    .owl-stage
+        display: flex
+    .owl-stage-outer
+        padding: 0 1px
+
+.owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 25px
+    @media only screen and (min-width: 468px)
+        margin-top: 33px
+    @media only screen and (min-width: 1200px)
+        margin-top: 45px
+    button
+        will-change: transform
+        border-radius: 50%
+        background: $white !important
+        opacity: 0.4
+        width: 8px
+        height: 8px
+        transition: all .3s
+        font-size: 0
+        padding: 0
+        border: none
+        outline: none
+        box-shadow: none
+        margin: 0 10px
+        @media only screen and (min-width: 468px)
+            margin: 0 20px
+        span
+            display: none
+        &.active
+            background: $white !important
+            opacity: 1
+
+.owl-nav
+    align-items: center
+    justify-content: center
+    margin-top: 18px
+    margin-bottom: 5px
+    display: none
+    @media only screen and ( min-width:768px)
+        margin-top: 0
+        margin-bottom: 0
+        display: flex
+    button
+        opacity: 1
+        padding: 0
+        margin: 0
+        font-size: 0
+        transition: all .3s ease
+        display: block
+        outline: none
+        outline-offset: none
+        position: absolute
+        z-index: 2
+        top: 50%
+        width: 35px
+        height: 35px
+        background-color: $white !important
+        will-change: transform
+        border-radius: 50%
+        box-shadow: 0 3px 20px 0 rgba($black, 0.1)
+        @include center
+        @media only screen and ( min-width:992px)
+            width: 40px
+            height: 40px
+        @media only screen and ( min-width:1200px)
+            width: 48px
+            height: 48px
+        &:hover
+            box-shadow: none
+        span
+            font-size: 0
+            width: 6px
+            height: 12px
+            display: block
+            background-size: contain
+            background-repeat: no-repeat
+            @media only screen and ( min-width:992px)
+                width: 8px
+                height: 14px
+        &.owl-prev
+            left: 0
+            transform: translate(-50%, -50%)
+            span
+                background: url( "data:image/svg+xml,%3Csvg fill='%2376C100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240.2 448.2'%3E%3Cpath d='M4.7,212.7l208-208c6.2-6.3,16.4-6.3,22.6-0.1c0,0,0.1,0.1,0.1,0.1c6.3,6.2,6.3,16.4,0.1,22.6c0,0-0.1,0.1-0.1,0.1L38.7,224.1l196.8,196.6c6.3,6.3,6.3,16.4,0,22.7s-16.4,6.3-22.7,0l-208-208C-1.5,229.2-1.6,219.1,4.7,212.7C4.7,212.8,4.7,212.8,4.7,212.7z'/%3E%3C/svg%3E" )
+        &.owl-next
+            right: 0
+            transform: translate(50%, -50%)
+            span
+                background: url( "data:image/svg+xml,%3Csvg fill='%2376C100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240.2 448.2'%3E%3Cpath d='M235.5,235.4l-208,208c-6.2,6.3-16.4,6.3-22.6,0.1c0,0-0.1-0.1-0.1-0.1c-6.3-6.2-6.3-16.4-0.1-22.6c0,0,0.1-0.1,0.1-0.1l196.8-196.6L4.7,27.4c-6.3-6.3-6.3-16.4,0-22.7s16.4-6.3,22.7,0l208,208C241.7,218.9,241.8,229.1,235.5,235.4C235.5,235.4,235.5,235.4,235.5,235.4z'/%3E%3C/svg%3E" )
+
+// SELECT2
+.select2Wrpr
+    position: relative
+    select
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        pointer-events: none
+        // display: none
+.select2
+    width: 100% !important
+    .selection
+        width: 100%
+        height: 100%
+        cursor: pointer
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        position: relative
+        display: flex
+        align-items: center
+        &::after
+            content: ""
+            width: 10px
+            height: 6px
+            transform: translateY(-50%)
+            background: url( "data:image/svg+xml,%3Csvg fill='%23000000' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 492 289'%3E%3Cpath d='M246.1,191.9L62,7.9C57,2.8,50.2,0,43,0c-7.2,0-14,2.8-19,7.9L7.9,24C2.8,29,0,35.8,0,43s2.8,14,7.9,19L227,281.2c5.1,5.1,11.9,7.9,19.1,7.8c7.2,0,14-2.8,19.1-7.8L484.1,62.2c5.1-5.1,7.9-11.8,7.9-19c0-7.2-2.8-14-7.9-19L468,8.1c-10.5-10.5-27.6-10.5-38.1,0L246.1,191.9z'/%3E%3C/svg%3E" ) no-repeat center !important
+            position: absolute
+            right: 15px
+            top: 50%
+            pointer-events: none
+    .select2-selection
+        font-size: 10px
+        line-height: 1
+        color: $text
+        width: 100% !important
+        height: 30px !important
+        border: 1px solid #F5F6FA !important
+        border-radius: 0
+        background-color: #F5F6FA
+        padding: 5px 10px
+        transition: all .3s ease
+        position: relative
+        align-items: center
+        display: flex !important
+        @media only screen and (min-width: 768px)
+            font-size: 12px
+            height: 35px !important
+        @media only screen and (min-width: 992px)
+            font-size: 14px
+            height: 40px !important
+            padding: 10px 15px
+        @media only screen and (min-width: 1441px)
+            height: 45px !important
+            padding: 10px 20px
+        @media only screen and (min-width: 1551px)
+            font-size: 16px
+            height: 60px !important
+            padding: 5px 25px
+        textarea
+            width: 100%
+            margin-top: 0
+            margin-bottom: 0
+            display: flex
+            align-content: center
+        .select2-selection__rendered
+            padding-left: 0 !important
+        &.select2-selection--multiple
+            cursor: text
+            box-sizing: border-box
+            user-select: none
+            -webkit-user-select: none
+            overflow-x: auto
+            display: flex
+            padding: 3px 10px
+            @media only screen and (min-width: 992px)
+                padding: 5px 20px
+            textarea
+                height: 100%
+                resize: none
+                overflow: hidden
+                padding: 10px 0
+            .select2-selection__choice
+                border: 1px solid #d3e8e7
+                will-change: transform
+                border-radius: 5px !important
+                background-color: #f7fffe
+                color: #263948
+                box-sizing: border-box
+                display: inline-block
+                margin-left: 5px
+                margin-top: 5px
+                padding: 4px 9px
+                padding-left: 20px
+                position: relative
+                max-width: 100%
+                overflow: hidden
+                text-overflow: ellipsis
+                vertical-align: bottom
+                white-space: nowrap
+                font-size: 13px
+                @media only screen and (min-width: 468px)
+                    font-size: 14px
+                @media only screen and (min-width: 1551px)
+                    font-size: 16px
+                .select2-selection__choice__remove
+                    background-color: transparent
+                    border: none
+                    border-right: 1px solid #d3e8e7
+                    color: #999
+                    cursor: pointer
+                    font-size: 13px
+                    font-weight: bold
+                    padding: 0 4px
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 20px
+                    height: 100%
+                .select2-selection__choice__display
+                    padding-left: 5px
+    .select2-selection__arrow
+        height: 100% !important
+.select2-dropdown
+    position: absolute
+    left: 0
+    z-index: 2
+    background: #f3f3f3
+    border: 1px solid rgb(211, 232, 231) !important
+    box-sizing: border-box
+    display: block
+    width: 100%
+    will-change: transform
+    border-radius: 8px !important
+    border-bottom-right-radius: 8px !important
+    box-sizing: border-box
+    left: -100000px
+    .select2-search--dropdown
+        display: block
+        padding: 4px
+        &.select2-search--hide
+            display: none
+        .select2-search__field
+            padding: 4px
+            width: 100%
+            box-sizing: border-box
+            border: 1px solid rgb(211, 232, 231)
+    .select2-results
+        display: block
+    .select2-results__options
+        list-style: none
+        margin: 0
+        padding: 0
+        max-height: 200px
+        overflow-y: auto
+        .select2-results__option
+            user-select: none
+            -webkit-user-select: none
+            ursor: pointer
+            transition: all .3s
+            font-size: 12px
+            padding: 5px 10px
+            color: #263948
+            @media only screen and (min-width: 468px)
+                font-size: 13px
+            @media only screen and (min-width: 992px)
+                padding: 10px 20px
+            @media only screen and (min-width: 1551px)
+                font-size: 14px
+            &:hover
+                background: $basecolor
+                color: #fff
+            &.select2-results__option--selected
+                background: $basecolor
+                color: #fff
+            &:not(:last-of-type)
+                border-bottom: 1px solid rgb(211, 232, 231)
+            &.select2-results__option--disabled
+                background: none
+                color: #999
+        &[aria-multiselectable="true"]
+            will-change: transform
+            border-radius: 12px !important
+            background-color: rgb(255, 255, 255)
+            box-shadow: -6.889px 11.025px 136px 0px rgba(1, 1, 1, 0.07)
+            padding: 12px 8px
+            @media only screen and (min-width: 468px)
+                padding: 20px 13px
+            .select2-results__option
+                padding: 8px 12px
+                position: relative
+                border: none
+                padding-left: 35px
+                will-change: transform
+                border-radius: 8px
+                @media only screen and (min-width: 468px)
+                    will-change: transform
+                    border-radius: 10px
+                    padding-left: 42px
+                &::before
+                    content: ""
+                    position: absolute
+                    border: 1px solid rgb(211, 232, 231)
+                    will-change: transform
+                    border-radius: 5px
+                    background-color: rgb(255, 255, 255)
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 8px
+                    width: 20px
+                    height: 20px
+                    @media only screen and (min-width: 468px)
+                        width: 22px
+                        height: 22px
+                        left: 12px
+                &::after
+                    content: ""
+                    background: url( "data:image/svg+xml,%3Csvg fill='%23ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 449 355.1'%3E%3Cpath d='M163,355.1c-0.6,0-1.3-0.1-1.9-0.2c-1.9-0.4-3.7-1.3-5.1-2.7L2.9,199.1c-3.8-3.8-3.8-10.1,0-13.9c0,0,0,0,0,0l59.3-59.3c3.8-3.8,10.1-3.8,13.9,0l86.9,86.9L372.9,2.9c3.8-3.8,10.1-3.8,13.9,0c0,0,0,0,0,0l59.3,59.3c3.8,3.8,3.8,10.1,0,13.9c0,0,0,0,0,0L170,352.3C168.1,354.1,165.6,355.1,163,355.1z'/%3E%3C/svg%3E" ) no-repeat center !important
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 8px
+                    width: 20px
+                    height: 20px
+                    background-size: 9px !important
+                    @media only screen and (min-width: 468px)
+                        background-size: 12px !important
+                        width: 22px
+                        height: 22px
+                        left: 12px
+                &:hover
+                    background-color: rgb(227, 249, 248)
+                    color: #263948
+                &.select2-results__option--selected
+                    color: #263948
+                    background-color: rgb(255, 255, 255)
+                    &:hover
+                        background-color: rgb(227, 249, 248)
+                        color: #263948
+                    &::before
+                        background-color: rgb(0, 195, 184)
+    &.select2-dropdown--below
+        border-top: none
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+    &.select2-dropdown--above
+        border-bottom: none
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+.select2-container--open
+    .select2-dropdown
+        left: 0

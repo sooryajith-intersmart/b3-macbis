@@ -1,0 +1,6 @@
+{
+    "Admin": true,
+    "Frontend": true,
+    "Controller": true,
+    "EnquiryContentController": true
+}

@@ -1,0 +1,547 @@
+// BASE STYLES
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    list-style: none
+    box-sizing: border-box
+    border-collapse: inherit
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    -webkit-tap-highlight-color: transparent
+    -webkit-text-rendering: optimizeSpeed
+    text-rendering: optimizeSpeed
+
+html, body
+    font-family: $fontstack1
+    line-height: normal
+    font-weight: 400
+    color: $text
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+    font-family: inherit
+    font-weight: 700
+    line-height: 1.2
+    color: inherit
+    margin-bottom: 10px
+    @media only screen and (min-width: 768px)
+        margin-bottom: 15px
+    @media only screen and (min-width: 1550px)
+        margin-bottom: 25px
+
+h1
+    font-size: 20px
+    line-height: 1.2
+    font-weight: 600
+    @media only screen and (min-width: 468px)
+        font-size: 24px
+    @media only screen and (min-width: 768px)
+        font-size: 34px
+    @media only screen and (min-width: 992px)
+        font-size: 52px
+    @media only screen and (min-width: 1200px)
+        font-size: 60px
+
+h2
+    font-size: 24px
+    @media only screen and (min-width: 468px)
+        font-size: 28px
+    @media only screen and (min-width: 1550px)
+        font-size: 32px
+
+h3
+    font-size: 20px
+    @media only screen and (min-width: 468px)
+        font-size: 24px
+    @media only screen and (min-width: 1200px)
+        font-size: 28px
+
+h4
+    font-size: 16px
+    @media only screen and (min-width: 468px)
+        font-size: 20px
+    @media only screen and (min-width: 1200px)
+        font-size: 24px
+
+h5
+    font-size: 14px
+    @media only screen and (min-width: 468px)
+        font-size: 16px
+    @media only screen and (min-width: 1200px)
+        font-size: 20px
+
+h6
+    font-size: 13px
+    @media only screen and (min-width: 468px)
+        font-size: 14px
+    @media only screen and (min-width: 1200px)
+        font-size: 16px
+
+p
+    font-size: 13px
+    font-weight: 400
+    line-height: 1.4
+    margin-bottom: 15px
+    @media only screen and (min-width: 576px)
+        font-size: 14px
+        margin-bottom: 25px
+    @media only screen and (min-width: 992px)
+        font-size: 15px
+    @media only screen and (min-width: 1441px)
+        font-size: 16px
+        margin-bottom: 30px
+    strong
+        font-weight: 600
+    a
+        color: $basecolor
+        display: inline
+        text-decoration: underline
+        text-underline-position: under
+        &:hover
+            color: $basecolor
+
+a
+    text-decoration: none
+    transition: all .3s
+    &:hover
+        color: inherit
+
+ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+img
+    border: 0
+    vertical-align: middle
+    -ms-interpolation-mode: bicubic
+    max-width: 100%
+    height: auto
+
+iframe
+    width: 100%
+    height: 100%
+
+.form-group
+    position: relative
+    margin-bottom: 15px
+    @media only screen and (min-width: 768px)
+        margin-bottom: 20px
+    .iti
+        width: 100%
+        font-size: 10px
+        line-height: 1
+        color: $text
+        @media only screen and (min-width: 768px)
+            font-size: 12px
+        @media only screen and (min-width: 992px)
+            font-size: 14px
+        @media only screen and (min-width: 1551px)
+            font-size: 16px
+        .iti__selected-flag
+            background: none
+    label, .label
+        font-size: 13px
+        line-height: 1
+        color: $black
+        font-weight: 400
+        margin-bottom: 5px
+        @media only screen and (min-width: 576px)
+            font-size: 14px
+        @media only screen and (min-width: 992px)
+            font-size: 16px
+            margin-bottom: 10px
+    .inputWrap
+        position: relative
+        z-index: 0
+        &.hasIcon
+            .form-control
+                padding-right: 20px
+                @media only screen and (min-width: 768px)
+                    padding-right: 25px
+            &.lft
+                .form-control
+                    padding-left: 20px
+                    @media only screen and (min-width: 768px)
+                        padding-left: 25px
+                .icon
+                    left: 0
+                    right: auto
+            .icon
+                width: 12px
+                height: 12px
+                position: absolute
+                top: 10px
+                right: 0
+                left: auto
+                margin: 0 5px
+                @media only screen and (min-width: 768px)
+                    top: 18px
+                    width: 14px
+                    height: 14px
+                svg, img
+                    display: block
+                    fill: $black
+                    @include imgFit
+            .toggle-password
+                opacity: 0
+        .form-control:focus~.toggle-password, .form-control:not(:placeholder-shown)~.toggle-password
+            opacity: 1
+
+.toggle-password
+    cursor: pointer
+    &.icon
+        top: 50% !important
+        transform: translateY(-50%) !important
+        width: 16px !important
+        height: 16px !important
+        margin: 0 15px !important
+        @media only screen and (min-width: 768px)
+            width: 18px !important
+            height: 18px !important
+        svg
+            opacity: 50%
+            fill: $basecolor !important
+
+.form-control
+    font-size: 10px
+    line-height: 1
+    color: $text
+    width: 100%
+    height: 30px
+    border: 1px solid #d6d6d6
+    border-radius: 0
+    background-color: $white
+    padding: 5px 10px
+    transition: all .3s ease
+    align-items: center
+    @include display
+    @media only screen and (min-width: 768px)
+        font-size: 12px
+        height: 35px
+    @media only screen and (min-width: 992px)
+        font-size: 14px
+        height: 40px
+        padding: 10px 15px
+    @media only screen and (min-width: 1441px)
+        height: 45px
+        padding: 10px 20px
+    @media only screen and (min-width: 1551px)
+        font-size: 16px
+        height: 60px
+        padding: 5px 25px
+    &:valid ~ .showPass
+        opacity: 1
+        pointer-events: all
+    &::placeholder
+        color: $text
+        text-transform: none
+    &:focus
+        box-shadow: none
+        border-color: $basecolor
+        font-weight: 400
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, :-webkit-autofill:active
+        -webkit-box-shadow: 0 0 0 1000px white inset
+        -webkit-text-fill-color: black
+        transition: background-color 5000s ease-in-out 0s
+    &:-internal-autofill-selected
+        background-color: -internal-light-dark(rgb(0, 0, 0), rgba(70, 90, 126, 0.4)) !important
+        -webkit-box-shadow: 0 0 0px 30px rgb(0, 0, 0) inset
+    &:-webkit-autofill
+        -webkit-box-shadow: 0 0 0 1000px white inset !important
+        -webkit-text-fill-color: black
+    &::-ms-expand
+        background-color: transparent
+        border: 0
+    @media (prefers-reduced-motion: reduce)
+        transition: none
+
+input[type=number]::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+.form-floating
+    &>label
+        font-size: 12px
+        line-height: 1
+        color: $text
+        padding: 15px 5px
+        left: 10px
+        z-index: 3
+        display: flex
+        align-items: center
+        @media only screen and (min-width: 576px)
+            font-size: 13px
+        @media only screen and (min-width: 992px)
+            left: 15px
+            font-size: 14px
+    .form-control, .form-control-plaintext
+        padding: 5px 15px
+        will-change: transform
+        border-radius: 5px
+        border: 1px solid #d6d6d6
+        min-height: auto
+        height: 35px
+        @media only screen and (min-width: 768px)
+            height: 45px
+        @media only screen and (min-width: 992px)
+            padding: 5px 20px
+        @media only screen and (min-width: 1200px)
+            height: 50px
+    .form-control-plaintext:-webkit-autofill, .form-control:-webkit-autofill
+        padding: 5px 10px
+        @media only screen and (min-width: 992px)
+            padding: 10px 20px
+    .form-control-plaintext:focus, .form-control-plaintext:not(:placeholder-shown), .form-control:focus, .form-control:not(:placeholder-shown)
+        padding: 5px 10px
+        @media only screen and (min-width: 992px)
+            padding: 10px 20px
+    .form-control:-webkit-autofill, .form-control-plaintext, .form-control:focus, .form-control:not(:placeholder-shown), .form-select
+        border-color: $basecolor
+    .form-control:-webkit-autofill~label, .form-control-plaintext~label, .form-control:focus~label, .form-control:not(:placeholder-shown)~label, .form-select~label
+        opacity: 1
+        transform: scale(0.85) translateY(-10px) translateX(0)
+        height: auto
+        width: auto
+        padding: 0px 5px
+        background: $white
+    .form-control:-webkit-autofill ~ .showPass, .form-control:focus ~ .showPass, .form-control:not(:placeholder-shown) ~ .showPass, .form-select ~ .showPass
+        opacity: 1
+        pointer-events: all
+
+textarea.form-control
+    min-height: 100px
+    padding-top: 10px
+    @media only screen and ( min-width: 576px )
+        padding-top: 15px
+    @media only screen and ( min-width: 992px )
+        min-height: 125px
+        padding-top: 20px
+input[type="date"].form-control,
+input[type="datetime-local"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+input[type="date"]
+    position: relative
+input[type="date"]::-webkit-calendar-picker-indicator
+    color: rgba(0, 0, 0, 0)
+    opacity: 1
+    display: block
+    background: url('../images/calendar.svg') no-repeat
+    width: 18px
+    height: 18px
+    border-width: thin
+    position: absolute
+    right: 22px
+
+.help-block
+    font-size: 10px
+    line-height: 1
+    color: $black
+    margin: 2px 0
+    transition: all 0.3s
+    position: absolute
+    &.success
+        color: green
+    &.danger
+        color: red
+
+.action-alert
+    font-size: 10px
+    color: $black
+    line-height: 1.2
+    padding: 9px 10px
+    width: fit-content
+    transition: all 0.3s
+    width: 100%
+    will-change: transform
+    border-radius: 5px
+    border-width: 1px
+    border-style: solid
+    margin: 10px 0
+    @media only screen and ( min-width: 768px )
+        font-size: 12px
+    &.success
+        color: $black
+        background: rgba(green, 0.08 )
+        border-color: rgba(green, 0.5 )
+    &.danger
+        color: $black
+        background: rgba(red, 0.08 )
+        border-color: rgba(red, 0.5 )
+
+button[type="submit"], .btn
+    @include defaultValue
+    font-size: 12px
+    line-height: 1
+    font-weight: 400
+    color: #707070
+    width: 100%
+    max-width: 180px
+    height: 35px
+    border: 1px solid #EAEDF3
+    will-change: transform
+        border-radius: 50px
+    background-color: $white
+    transition: all 0.4s ease
+    @include center
+    @media only screen and (min-width: 768px)
+        font-size: 14px
+        max-width: 220px
+        height: 40px
+    @media only screen and (min-width: 992px)
+        font-size: 16px
+        height: 45px
+    @media only screen and (min-width: 1200px)
+        height: 50px
+    &:hover, &:focus, &:active, &.active, &.show, &:first-child:active
+        border-color: $basecolor
+        background-color: $basecolor
+        color: $white
+
+::selection
+    color: $white
+    background: $basecolor
+::-moz-selection
+    color: $white
+    background: $basecolor
+::-webkit-scrollbar
+    width: 5px
+::-webkit-scrollbar-thumb
+    background: $basecolor
+    will-change: transform
+    border-radius: 30px
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 0 grey
+    border-radius: 0px
+    background: rgb(168, 180, 198)
+
+svg
+    display: inline-block
+    position: relative
+    width: 100%
+    vertical-align: middle
+    overflow: hidden
+
+.btn-check:focus+.btn, .btn:focus
+    outline: 0
+    box-shadow: none
+
+.row
+    margin-left: -10px
+    margin-right: -10px
+    @include display
+    >*
+        padding-left: 10px
+        padding-right: 10px
+
+.c-checkbox
+    align-items: center
+    @include display
+    input
+        padding: 0
+        height: initial
+        width: initial
+        margin-bottom: 0
+        display: none
+        cursor: pointer
+    label
+        position: relative
+        cursor: pointer
+        margin: 0
+        font-size: 13px
+        @media only screen and (min-width: 992px)
+            font-size: 16px
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            top: 3px
+            left: 6px
+            width: 5px
+            height: 10px
+            border: solid $white
+            border-width: 0 2px 2px 0
+            transform: rotate(45deg)
+            margin-top: -2px
+            @media only screen and (min-width: 992px)
+                top: 5px
+        &:before
+            content: ''
+            -webkit-appearance: none
+            background-color: $white
+            border: 1px solid $basecolor
+            will-change: transform
+            border-radius: 4px
+            box-shadow: none
+            padding: 8px
+            display: inline-block
+            position: relative
+            vertical-align: middle
+            cursor: pointer
+            margin-right: 5px
+            margin-top: -2px
+            @media only screen and (min-width: 992px)
+                margin-right: 10px
+    input:checked + label
+        color: $basecolor
+        &::before
+            background-color: $basecolor
+            border-color: $basecolor
+    input:checked + label:after
+        border-color: $white
+
+.irs--flat
+    height: auto !important
+    margin: 10px 0
+    @media only screen and (min-width:992px)
+        margin: 15px 0
+    &:hover
+        .irs-from, .irs-to
+            visibility: visible !important
+            opacity: 0.8
+    .irs-line
+        top: 0 !important
+        height: 6px !important
+    .irs-grid
+        height: 6px !important
+    .irs-bar
+        top: 0 !important
+        height: 6px !important
+        background-color: $basecolor !important
+    .irs-min, .irs-max
+        top: 18px !important
+        padding: 0 !important
+        background-color: transparent !important
+        visibility: visible !important
+        font-size: 12px !important
+        line-height: 1 !important
+        font-weight: 600
+        color: $text !important
+        @media only screen and (min-width:1441px)
+            font-size: 14px !important
+        &::after
+            content: "$"
+            float: left
+    .irs-from, .irs-to, .irs-single
+        visibility: hidden !important
+        opacity: 0
+        top: -25px !important
+        transition: all 0.4s ease
+        background-color: $basecolor !important
+        &::before
+            border-top-color: $basecolor !important
+    .irs-handle
+        top: -5px !important
+        width: 16px !important
+        height: 16px !important
+        background-color: $basecolor !important
+        will-change: transform
+        border-radius: 50%
+        box-shadow: 0 3px 6px 0 rgba($black, 0.15)
+        i
+            display: none !important

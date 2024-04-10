@@ -1,0 +1,54 @@
+.container
+    width: 100%
+    padding-right: 15px
+    padding-left: 15px
+    margin-right: auto
+    margin-left: auto
+    @media only screen and (min-width: 992px)
+        max-width: 1050px
+    @media only screen and (min-width: 1200px)
+        max-width: 1180px
+    @media only screen and (min-width: 1441px)
+        max-width: 1360px
+    @media only screen and (min-width: 1551px)
+        max-width: 1480px
+    @media (max-width: 992px) and (min-width: 768px)
+        max-width: 95%
+    @media only screen and (max-width: 768px)
+        max-width: none
+    &.smX        
+        @media only screen and (min-width: 992px)
+            padding-left: 60px
+            padding-right: 60px
+        @media only screen and (min-width: 1200px)
+            padding-left: 80px
+            padding-right: 80px
+        @media only screen and (min-width: 1441px)
+            padding-left: 100px
+            padding-right: 100px
+
+.sp-container
+    width: 100%
+    max-width: calc(100% - ((100% - 975px)/ 2))
+    @media only screen and (min-width: 992px)
+        max-width: calc(100% - ((100% - 1050px)/ 2))
+    @media only screen and (min-width: 1200px)
+        max-width: calc(100% - ((100% - 1180px)/ 2))
+    @media only screen and (min-width: 1441px)
+        max-width: calc(100% - ((100% - 1360px)/ 2))
+    @media only screen and (min-width: 1551px)
+        max-width: calc(100% - ((100% - 1480px)/ 2))
+    @media (max-width: 992px) and (min-width: 768px)
+        max-width: calc(100% - ((100% - 95%)/ 2))
+    @media only screen and (max-width: 768px)
+        max-width: none
+    &.lft
+        margin-left: 0
+        margin-right: auto
+        padding-right: 15px
+        padding-left: 0
+    &.rgt
+        margin-left: auto
+        margin-right: 0
+        padding-right: 0
+        padding-left: 15px

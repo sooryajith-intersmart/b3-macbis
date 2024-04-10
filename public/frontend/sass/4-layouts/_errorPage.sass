@@ -1,0 +1,88 @@
+//ERROR_PAGE
+/******************ERROR_PAGE**********************/
+.errorPage
+    background: #f8f8f8
+    &.NOBanner
+        padding-top: 50px
+        @media only screen and (min-width: 576px)
+            padding-top: 80px
+        @media only screen and (min-width: 992px)
+            padding-top: 100px
+        @media only screen and (min-width: 1441px)
+            padding-top: 140px
+    section
+        position: relative
+        .FloatIcons
+            #Triangle
+                left: 15px
+                bottom: 55px
+            #Triangle2
+                bottom: 115px
+                right: 35px
+            #Round
+                left: 108px
+                top: 40px
+            #Round2
+                right: 120px
+                bottom: 55px
+    .row
+        margin: 0
+    .page_cntnt
+        padding: 40px 0
+        text-align: center
+        margin: auto
+        @media only screen and (min-width: 468px)
+            padding: 80px 0
+    .head_one
+        font-size: 69px
+        font-weight: 700
+        color: $basecolor
+        letter-spacing: 1px
+        @media only screen and (min-width: 468px)
+            font-size: 95px
+
+    .head_two
+        font-size: 14px
+        font-weight: 600
+        color: #696868
+        margin-bottom: 30px
+        letter-spacing: 1px
+        @media only screen and (min-width: 468px)
+            font-size: 20px
+            margin-bottom: 40px
+
+    .head_three
+        font-size: 16px
+        line-height: normal
+        letter-spacing: 1px
+        font-weight: 600
+        color: #696868
+        margin-bottom: 15px
+        @media only screen and (min-width: 468px)
+            font-size: 25px
+    .txt
+        font-size: 12px
+        line-height: 1.4
+        font-weight: 400
+        color: $text
+        margin-bottom: 10px
+        @media only screen and (min-width: 576px)
+            font-size: 14px
+            margin-bottom: 15px
+        @media only screen and (min-width: 992px)
+            font-size: 16px
+            margin-bottom: 20px
+    p
+        @extend .txt
+        color: #696868
+        margin: 0px
+
+    .btn
+        margin: auto
+        margin-top: 15px
+        @media only screen and (min-width: 468px)
+            margin: auto
+            margin-top: 25px
+        @media only screen and (min-width: 1551px)
+            margin: auto
+            margin-top: 40px

@@ -1,0 +1,65 @@
+//VERTICALS//VERTICALS_PAGE_PAGE
+/************** ******* **************/
+/************* VERTICALS/************* VERTICALS_PAGE *************/_PAGE *************/
+/************** ******* **************/
+.verticalsPage
+    .busiBx
+        &:hover            
+            transform: scaleY(1.01) translateY(-5px)
+            @media only screen and (min-width: 576px)
+                transform: scaleY(1.02) translateY(-10px)
+            @media only screen and (min-width: 992px)
+                transform: scaleY(1.03) translateY(-15px)
+            @media only screen and (min-width: 1441px)
+                transform: scaleY(1.04) translateY(-20px)
+        .visitBtn
+            bottom: 60px
+            @media only screen and (min-width: 576px)
+                bottom: 50px
+            @media only screen and (min-width: 992px)
+                bottom: 60px
+            @media only screen and (min-width: 1441px)
+                bottom: 70px
+    #Verticals
+        width: 100%
+        height: auto
+        padding: 40px 0
+        @media only screen and (min-width: 576px)
+            padding: 80px 0
+        @media only screen and (min-width: 992px)
+            padding: 100px 0
+        @media only screen and (min-width: 1441px)
+            padding: 130px 0
+        .tleWrap
+            margin-bottom: 20px
+            @media only screen and (min-width: 576px)
+                margin-bottom: 40px
+            @media only screen and (min-width: 992px)
+                margin-bottom: 60px
+            @media only screen and (min-width: 1441px)
+                margin-bottom: 80px
+            @media only screen and (min-width: 1551px)
+                margin-bottom: 100px
+        .dFlx
+            margin: 0 -4px
+            @include display
+            @media only screen and (min-width: 576px)
+                margin: 0 -6px
+            @media only screen and (min-width: 992px)
+                margin: 0 -10px
+            @media only screen and (min-width: 1441px)
+                margin: 0 -15px
+            &>*
+                padding: 4px
+                @media only screen and (min-width: 576px)
+                    padding: 6px
+                @media only screen and (min-width: 992px)
+                    padding: 10px
+                @media only screen and (min-width: 1441px)
+                    padding: 15px
+            &>.item
+                width: calc(100% / 2)
+                @media only screen and (min-width: 768px)
+                    width: calc(100% / 3)
+                @media only screen and (min-width: 1300px)
+                    width: calc(100% / 4)

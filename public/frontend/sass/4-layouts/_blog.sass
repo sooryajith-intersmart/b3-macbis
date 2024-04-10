@@ -1,0 +1,181 @@
+//BLOGS
+/************** ******* **************/
+/************* BLOGS/*************
+/************** ******* **************/
+.blogPage
+    #BlogListing
+        width: 100%
+        height: auto
+        padding: 40px 0
+        @media only screen and (min-width: 576px)
+            padding: 80px 0
+        @media only screen and (min-width: 992px)
+            padding: 100px 0
+        @media only screen and (min-width: 1441px)
+            padding: 120px 0
+        .tleWrap
+            margin-bottom: 15px
+            @media only screen and (min-width: 576px)
+                margin-bottom: 20px
+            @media only screen and (min-width: 992px)
+                margin-bottom: 30px
+            @media only screen and (min-width: 1441px)
+                margin-bottom: 50px
+        .dFlx
+            margin: 0 -5px
+            @include display
+            @media only screen and (min-width: 576px)
+                margin: 0 -10px
+            @media only screen and (min-width: 992px)
+                margin: 0 -15px
+            @media only screen and (min-width: 1441px)
+                margin: 0 -20px
+            &>*
+                padding: 5px
+                @media only screen and (min-width: 576px)
+                    padding: 10px
+                @media only screen and (min-width: 992px)
+                    padding: 15px
+                @media only screen and (min-width: 1441px)
+                    padding: 20px
+            &>.item
+                width: calc(100% / 2)
+                @media only screen and (min-width: 576px)
+                    width: calc(100% / 3)
+                @media only screen and (min-width: 992px)
+                    width: calc(100% / 3)
+    &.detail
+        #BlogDetail
+            width: 100%
+            height: auto
+            padding: 40px 0 0
+            @media only screen and (min-width: 576px)
+                padding: 60px 0 0
+            @media only screen and (min-width: 992px)
+                padding: 100px 0 0
+            @media only screen and (min-width: 1200px)
+                padding: 120px 0 0
+            @media only screen and (min-width: 1441px)
+                padding: 140px 0 0
+            p
+                text-align: justify
+            .cntWrap
+                margin: auto
+                @media only screen and (min-width: 992px)
+                    max-width: 768px
+                @media only screen and (min-width: 1200px)
+                    max-width: 992px
+                @media only screen and (min-width: 1441px)
+                    max-width: 1200px
+            .mainTxt, h1
+                font-size: 20px
+                line-height: 1.2
+                font-weight: 600
+                color: $black
+                margin-bottom: 10px
+                @media only screen and (min-width: 468px)
+                    font-size: 22px
+                @media only screen and (min-width: 576px)
+                    font-size: 26px
+                    margin-bottom: 15px
+                @media only screen and (min-width: 992px)
+                    font-size: 30px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 1200px)
+                    font-size: 34px
+                @media only screen and (min-width: 1441px)
+                    font-size: 40px
+                &>span
+                    color: $basecolor
+            .subTxt, h2, h3
+                font-size: 16px
+                line-height: 1.2
+                font-weight: 600
+                color: $text
+                margin-bottom: 10px
+                @media only screen and (min-width: 576px)
+                    font-size: 20px
+                    margin-bottom: 15px
+                @media only screen and (min-width: 992px)
+                    font-size: 26px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 1200px)
+                    font-size: 30px
+                @media only screen and (min-width: 1441px)
+                    font-size: 36px
+
+            h4, h5, h6
+                font-size: 14px
+                line-height: 1.2
+                font-weight: 600
+                color: $text
+                margin-bottom: 10px
+                @media only screen and (min-width: 576px)
+                    font-size: 16px
+                    margin-bottom: 15px
+                @media only screen and (min-width: 992px)
+                    font-size: 18px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 1200px)
+                    font-size: 20px
+                @media only screen and (min-width: 1441px)
+                    font-size: 22px
+            img
+                max-width: 100%
+                max-height: 100%
+                margin-bottom: 15px
+                @include imgFit
+                @media only screen and ( min-width: 576px )
+                    margin-bottom: 20px
+                @media only screen and ( min-width: 992px )
+                    margin-bottom: 30px
+                @media only screen and ( min-width: 1200px )
+                    margin-bottom: 40px
+                @media only screen and ( min-width: 1441px )
+                    margin-bottom: 50px
+            .txt
+                font-size: 12px
+                line-height: 1.4
+                font-weight: 400
+                color: $text
+                margin-bottom: 10px
+                @media only screen and (min-width: 576px)
+                    font-size: 14px
+                    margin-bottom: 15px
+                @media only screen and (min-width: 992px)
+                    font-size: 16px
+                    margin-bottom: 20px
+            p
+                @extend .txt
+                &:last-child
+                    margin-bottom: 0
+            ul, ol
+                padding-left: 0
+                margin: 0
+                margin-bottom: 10px
+                @media only screen and (min-width: 576px)
+                    margin-bottom: 15px
+                @media only screen and (min-width: 992px)
+                    margin-bottom: 20px
+                li
+                    @extend .txt
+                    margin: 5px 0
+                    @media only screen and (min-width: 576px)
+                        margin: 10px 0
+                    @media only screen and (min-width: 992px)
+                        margin: 15px 0
+            ul
+                margin-left: 15px
+                li
+                    width: 100%
+                    list-style: disc
+            ol
+                margin-left: 15px
+                li
+                    width: 100%
+                    list-style: decimal
+            .four-column-list 
+                padding-left: 25px
+                columns: 4
+                list-style-type: none
+            

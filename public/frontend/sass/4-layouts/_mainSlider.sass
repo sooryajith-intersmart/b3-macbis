@@ -1,0 +1,252 @@
+// MAINSLIDER
+/************** ******* **************/
+/************* MAINSLIDER *************/
+/************** ******* **************/
+#MainBanner
+    width: 100%
+    height: 420px
+    background-color: $white
+    overflow: hidden
+    margin-top: -45px
+    @media only screen and (min-width: 576px)
+        height: 510px
+        margin-top: -65px
+    @media only screen and (min-width: 992px)
+        height: var(--app-height)
+        min-height: 576px
+    @media only screen and (min-width: 1200px)
+        margin-top: -82px
+    @media only screen and (min-width: 1441px)
+        min-height: 100vh
+        min-height: 768px
+        margin-top: -88px
+    @media only screen and (min-width: 1551px)
+        margin-top: -88px
+
+    .sp-container
+        height: 100%
+        .dFlx
+            width: 100%
+            height: 100%
+            @include display
+            &>.lftSd
+                width: 100%
+                height: 50%
+                background-color: $white
+                padding-top: 60px
+                position: relative
+                z-index: 0
+                align-items: center
+                @include display
+                @media only screen and (min-width: 576px)
+                    width: 220px
+                    height: 100%
+                    padding-top: 0
+                @media only screen and (min-width: 768px)
+                    width: 300px
+                @media only screen and (min-width: 992px)
+                    width: 350px
+                @media only screen and (min-width: 1441px)
+                    width: 400px
+                @media only screen and (min-width: 1551px)
+                    width: 460px
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    right: 100%
+                    width: 50vw
+                    height: 100%
+                    background-color: $white
+            &>.rgtSd
+                width: 100%
+                height: 50%
+                @media only screen and (min-width: 576px)
+                    width: calc( 100% - 220px )
+                    height: 100%
+                @media only screen and (min-width: 768px)
+                    width: calc( 100% - 300px )
+                @media only screen and (min-width: 992px)
+                    width: calc( 100% - 350px )
+                @media only screen and (min-width: 1441px)
+                    width: calc( 100% - 400px )
+                @media only screen and (min-width: 1551px)
+                    width: calc( 100% - 460px )
+    .cntWrap
+        width: 100%
+        color: $basecolor
+        margin: auto 0
+        &>*
+            margin: 5px 0
+            @media only screen and (min-width: 576px)
+                margin: 10px 0
+            @media only screen and (min-width: 992px)
+                margin: 15px 0
+            @media only screen and (min-width: 1441px)
+                margin: 20px 0
+        .mHead
+            font-size: 28px
+            line-height: 1.1
+            font-weight: 500
+            font-family: $fontstack1
+            @media only screen and (min-width: 468px)
+                font-size: 32px
+            @media only screen and (min-width: 768px)
+                font-size: 36px
+            @media only screen and (min-width: 992px)
+                font-size: 40px
+            @media only screen and (min-width: 1200px)
+                font-size: 50px
+            @media only screen and (min-width: 1441px)
+                font-size: 60px
+        .sHead
+            font-size: 13px
+            line-height: 1
+            font-weight: 300
+            @media only screen and (min-width: 576px)
+                font-size: 15px
+            @media only screen and (min-width: 768px)
+                font-size: 16px
+            @media only screen and (min-width: 992px)
+                font-size: 20px
+            @media only screen and (min-width: 1200px)
+                font-size: 22px
+            @media only screen and (min-width: 1441px)
+                font-size: 24px
+            @media only screen and (min-width: 1551px)
+                font-size: 26px
+        .btnWrap
+            margin-top: 10px
+            @include display
+            display: none
+            @media only screen and (min-width: 576px)
+                margin-top: 15px
+            @media only screen and (min-width: 992px)
+                margin-top: 20px
+            .baseBtn
+                max-width: 100px
+                @media only screen and (min-width: 576px)
+                    max-width: 140px
+                @media only screen and (min-width: 992px)
+                    max-width: 180px
+                @media only screen and (min-width: 1441px)
+                    max-width: 210px
+    .sliderWrap
+        width: 100%
+        height: 100%
+        @include display
+        .item
+            width: calc( 100% / 4 )
+            height: 100%
+        .swiper
+            width: 100%
+            height: 100%
+            .swiper-slide
+                height: 100%
+                padding-left: 5px
+                @media only screen and (min-width: 1200px)
+                    padding-left: 10px
+        a
+            display: block
+            width: 100%
+            height: 100%
+        .imgWrap
+            width: 100%
+            height: 100%
+            position: relative
+            z-index: 0
+            img
+                @include imgFit
+    .imgWrap
+        width: 100%
+        height: 100%
+        position: relative
+        z-index: 0
+        // &::after
+        //     content: ''
+        //     position: absolute
+        //     top: 0
+        //     left: 0
+        //     width: 100%
+        //     height: 100%
+        //     opacity: 0.9
+        //     background: rgb(255, 255, 255)
+        //     background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 16%, rgba(255, 255, 255, 0) 100%)
+        //     pointer-events: none
+        //     @media only screen and (min-width: 576px)
+        //         background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 15%, rgba(255, 255, 255, 0) 100%)
+        img
+            @include imgFit
+        .bttmWrap
+            width: 100%
+            height: auto
+            position: absolute
+            background: rgba($white, 0.8)
+            z-index: 1
+            bottom: 0
+            left: 0
+            padding: 5px 5px 5px 5px
+            @media only screen and (min-width: 576px)
+                padding: 10px 5px 10px 5px
+            @media only screen and (min-width: 768px)
+                padding: 10px 5px 10px 10px
+            @media only screen and (min-width: 992px)
+                padding: 15px 5px 15px 15px
+            @media only screen and (min-width: 1441px)
+                padding: 20px 5px 20px 20px
+            @media only screen and (min-width: 1771px)
+                padding: 25px 10px 25px 30px
+            &>*
+                color: $white
+                margin: 2px 0
+                @media only screen and (min-width: 992px)
+                    margin: 3px 0
+            .count
+                font-size: 12px
+                line-height: 1
+                font-weight: 300
+                display: inline-block
+                position: relative
+                z-index: 0
+                @media only screen and (min-width: 468px)
+                    font-size: 13px
+                @media only screen and (min-width: 576px)
+                    font-size: 12px
+                @media only screen and (min-width: 992px)
+                    font-size: 14px
+                @media only screen and (min-width: 1200px)
+                    font-size: 15px
+                @media only screen and (min-width: 1441px)
+                    font-size: 16px
+                @media only screen and (min-width: 1551px)
+                    font-size: 18px
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: calc(100% + 10px)
+                    left: 50%
+                    width: 1px
+                    height: 6px
+                    background-color: $white
+                    display: block
+                    transform: translateX(50%)
+            .tle
+                font-size: 9px
+                line-height: 1.5
+                color: $black
+                font-weight: 700
+                text-transform: uppercase
+                @media only screen and (min-width: 375px)
+                    font-size: 11px
+                @media only screen and (min-width: 468px)
+                    font-size: 14px
+                @media only screen and (min-width: 576px)
+                    font-size: 10px
+                @media only screen and (min-width: 768px)
+                    font-size: 15px
+                @media only screen and (min-width: 992px)
+                    font-size: 16px
+                @media only screen and (min-width: 1200px)
+                    font-size: 18px
+                @media only screen and (min-width: 1441px)
+                    font-size: 20px
