@@ -182,4 +182,64 @@ class FrontendController extends Controller
 
         return $response->json();
     }
+
+    /**
+     * Displays coming soon b3 aqua page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Aqua()
+    {
+        return view('frontend::frontend.coming-soon-b3-aqua');
+    }
+
+    /**
+     * Displays coming soon b3 autos page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Autos()
+    {
+        return view('frontend::frontend.coming-soon-b3-autos');
+    }
+
+    /**
+     * Displays coming soon b3 dhathukala page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Dhathukala()
+    {
+        return view('frontend::frontend.coming-soon-b3-dhathukala');
+    }
+
+    /**
+     * Displays coming-soon-b3-edifice page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Edifice()
+    {
+        return view('frontend::frontend.coming-soon-b3-edifice');
+    }
+
+    /**
+     * Displays coming soon b3 integra page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Integra()
+    {
+        return view('frontend::frontend.coming-soon-b3-integra');
+    }
+
+    /**
+     * Displays coming soon b3 visual page.
+     * 
+     * @author Sooryajith
+     */
+    public function comingSoonB3Visual()
+    {
+        return view('frontend::frontend.coming-soon-b3-visual');
+    }
 }

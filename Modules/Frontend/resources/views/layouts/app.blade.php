@@ -4,9 +4,9 @@
 <head>
     <title>
         @hasSection('title')
-        @yield('title')
+            @yield('title')
         @else
-        @themeSettings('website_name')
+            @themeSettings('website_name')
         @endif
     </title>
 
