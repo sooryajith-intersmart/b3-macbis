@@ -546,10 +546,10 @@
 
         switch (buttonBeforeText) {
             case "send":
-                buttonAfterText = "Sending...";
+                buttonAfterText = "SENDING...";
                 break;
             default:
-                buttonAfterText = "Submitting...";
+                buttonAfterText = "SUBMITTING...";
                 break;
         }
 
