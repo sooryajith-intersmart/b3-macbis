@@ -15,6 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
 
+    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('frontend/images/site.webmanifest') }}">
+
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
     <meta name="mobile-web-app-capable" content="yes">
@@ -59,7 +65,7 @@
             <div class="row">
                 <div class="page_cntnt">
                     <div class="imgB">
-                        <img src="{{ asset('frontend/images/Background5.JPG') }}" width="600px" height="600px" alt="business logo">
+                        <img src="{{ asset('frontend/images/Background.JPG') }}" width="600px" height="600px" alt="business logo">
                     </div>
                     <div class="imgB1">
                         <img src="{{ asset('frontend/images/v-logo-07.png') }}" width="260px" height="45px" alt="business logo">
