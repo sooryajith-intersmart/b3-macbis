@@ -3,17 +3,15 @@
 namespace Modules\Admin\app\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use App\models\Enquiry;
+use App\Models\Enquiry;
 use Yajra\DataTables\Facades\DataTables;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\EnquiryExport;
 
 class EnquiryController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      * @return Renderable
      */
@@ -60,7 +58,7 @@ class EnquiryController extends Controller
         }
 
         $enquiries = Enquiry::all();
-        
+
         return view('admin::enquiry.index', compact('enquiries'));
     }
 
