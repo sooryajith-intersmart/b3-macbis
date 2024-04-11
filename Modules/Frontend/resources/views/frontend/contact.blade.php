@@ -253,7 +253,7 @@
                 buttonAfterText = "Sending...";
                 break;
             default:
-                buttonAfterText = "Processing...";
+                buttonAfterText = "Submitting...";
                 break;
         }
 

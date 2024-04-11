@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('section_one_title')->nullable();
             $table->string('section_two_title')->nullable();
-            $table->string('section_two_title_two')->nullable();
             $table->string('section_three_title')->nullable();
             $table->text('section_three_description')->nullable();
             $table->text('section_three_image')->nullable();

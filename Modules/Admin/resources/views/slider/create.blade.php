@@ -86,14 +86,15 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary" id="submitBtn">Create</button>
-                    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Create</button>
                 </div>
             </div>
         </div>
+    </div>
 </form>
 @endsection

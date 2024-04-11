@@ -123,7 +123,7 @@
                 <div class="lftSd">
                     <div class="tleWrap">
                         <h6 class="sTle"> About</h6>
-                        <h2 class="mTle"><img src="assets/images/logo.png" alt="logo"> Group</h2>
+                        <h2 class="mTle"><img src="{{ asset('frontend/images/logo.png') }}" alt="logo"> Group</h2>
                     </div>
                 </div>
                 <div class="rgtSd">
@@ -141,15 +141,7 @@
     <section id="Business">
         <div class="container">
             <div class="tleWrap center wow animate__fadeInDown" data-wow-duration="1s">
-                <h2 class="mTle">{{ $home->section_two_title }} <span> {{ $home->section_two_title_two }}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="51.868" height="52.547" viewBox="0 0 51.868 52.547">
-                            <g id="arrow" transform="translate(-1618.5 -844.245)">
-                                <path id="Path_166" data-name="Path 166" d="M25,0H73.262" transform="translate(1593.5 869.906)" fill="none" stroke="#1a1818" stroke-width="5" />
-                                <path id="Path_165" data-name="Path 165" d="M6270.4,849.083l25.459,23.478L6270.4,898.024" transform="translate(-4629.103 -3)" fill="none" stroke="#1a1818" stroke-width="5" />
-                            </g>
-                        </svg>
-                    </span>
-                </h2>
+                <h2 class="mTle">{{ $home->section_two_title }}</h2>
             </div>
             <div class="splide businessSlide">
                 <div class="splide__track">
@@ -405,7 +397,72 @@
 <!-- SPLIDE --->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
-
+@if($businesses->isNotEmpty())
+<script>
+    $(document).ready(function() {
+        var businessSlide = new Splide('.businessSlide', {
+            type: 'loop',
+            perPage: 4,
+            gap: 5,
+            perMove: 1,
+            rewind: false,
+            arrows: false,
+            autoplay: true,
+            pagination: false,
+            breakpoints: {
+                1441: {
+                    perPage: 3,
+                    gap: 5,
+                },
+                576: {
+                    perPage: 2,
+                    gap: 3,
+                },
+                376: {
+                    perPage: 1,
+                    gap: 2,
+                },
+            }
+        });
+        businessSlide.mount();
+    });
+</script>
+@endif
+@if($blogs->isNotEmpty())
+<script>
+    $(document).ready(function() {
+        var blogSlide = new Splide('.blogSlide', {
+            type: 'splide',
+            perPage: 3,
+            rewind: true,
+            arrows: false,
+            pagination: false,
+            autoplay: true,
+            perMove: 1,
+            gap: 45,
+            breakpoints: {
+                1200: {
+                    gap: 35,
+                },
+                992: {
+                    gap: 25,
+                },
+                576: {
+                    perPage: 2.2,
+                    gap: 20,
+                    perMove: 0.8,
+                },
+                376: {
+                    perPage: 1.2,
+                    gap: 15,
+                    perMove: 0.8,
+                },
+            }
+        });
+        blogSlide.mount();
+    });
+</script>
+@endif
 <script>
     $(document).ready(function() {
 
@@ -461,63 +518,6 @@
                 disableOnInteraction: false
             },
         });
-
-        var businessSlide = new Splide('.businessSlide', {
-            type: 'loop',
-            perPage: 4,
-            gap: 5,
-            perMove: 1,
-            rewind: false,
-            arrows: false,
-            autoplay: true,
-            pagination: false,
-            breakpoints: {
-                1441: {
-                    perPage: 3,
-                    gap: 5,
-                },
-                576: {
-                    perPage: 2,
-                    gap: 3,
-                },
-                376: {
-                    perPage: 1,
-                    gap: 2,
-                },
-            }
-        });
-        businessSlide.mount();
-
-        var blogSlide = new Splide('.blogSlide', {
-            type: 'splide',
-            perPage: 3,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            autoplay: true,
-            perMove: 1,
-            gap: 45,
-            breakpoints: {
-                1200: {
-                    gap: 35,
-                },
-                992: {
-                    gap: 25,
-                },
-                576: {
-                    perPage: 2.2,
-                    gap: 20,
-                    perMove: 0.8,
-                },
-                376: {
-                    perPage: 1.2,
-                    gap: 15,
-                    perMove: 0.8,
-                },
-            }
-        });
-        blogSlide.mount();
-
     });
 </script>
 <script src="https://www.google.com/recaptcha/api.js?render=6Lfp27YpAAAAAFBo6qRMGMiGHXb3_q2spLeaSjJn"></script>
@@ -549,7 +549,7 @@
                 buttonAfterText = "Sending...";
                 break;
             default:
-                buttonAfterText = "Processing...";
+                buttonAfterText = "Submitting...";
                 break;
         }
 

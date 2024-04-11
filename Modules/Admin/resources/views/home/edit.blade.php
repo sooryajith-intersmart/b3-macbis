@@ -41,19 +41,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="section_two_title_two">Business Title (In Red Box)</label>
-                                <input type="text"
-                                    class="form-control @error('section_two_title_two') is-invalid @enderror"
-                                    id="section_two_title_two" name="section_two_title_two"
-                                    value="{{ old('section_two_title_two', $home->section_two_title_two) }}">
-                                @error('section_two_title_two')
-                                <span class="invalid-feedback">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="section_three_title">Our Story Title</label>
                                 <input type="text"
@@ -65,7 +53,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="section_three_description">Our Story Description</label>
                                 <textarea class="form-control @error('section_three_description') is-invalid @enderror"

@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $business->title }}</td>
-                            <td><img src="{{ $business->image_value }}" class="rounded" alt="" width="40"></td>
+                            <td><img src="{{ $business->image_value }}" class="rounded" alt="" height="40"></td>
                             <td>
                                 <input type="text" class="form-control sort-order w-50" placeholder="0"
                                     data-model="Business" data-id="{{ base64_encode($business->id) }}" name="sort_order"

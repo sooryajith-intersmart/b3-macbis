@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $slider->title }}</td>
-                            <td><img src="{{ $slider->image_value }}" class="rounded" alt="" width="40"></td>
+                            <td><img src="{{ $slider->image_value }}" class="rounded" alt="" height="40"></td>
                             <td>
                                 <input type="text" class="form-control sort-order w-50" placeholder="0"
                                     data-model="Slider" data-id="{{ base64_encode($slider->id) }}" name="sort_order"
