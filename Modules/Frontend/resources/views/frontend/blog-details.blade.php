@@ -2,7 +2,7 @@
 @section('title', $blog_single->meta_title)
 @section('description', $blog_single->meta_description)
 @section('keywords', $blog_single->meta_keywords)
-@section('image', $blog_single->image)
+@section('image', $blog_single->thumb_image_value)
 @section('content')
 <div id="pageWrapper" class="blogPage detail">
 
