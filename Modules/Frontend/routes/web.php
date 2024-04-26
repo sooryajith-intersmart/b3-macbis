@@ -27,3 +27,4 @@ Route::get('/coming-soon-b3-dhathukala', [FrontendController::class, 'comingSoon
 Route::get('/coming-soon-b3-edifice', [FrontendController::class, 'comingSoonB3Edifice'])->name('coming-soon-b3-edifice');
 Route::get('/coming-soon-b3-integra', [FrontendController::class, 'comingSoonB3Integra'])->name('coming-soon-b3-integra');
 Route::get('/coming-soon-b3-visual', [FrontendController::class, 'comingSoonB3Visual'])->name('coming-soon-b3-visual');
+Route::get('{slug}', [FrontendController::class, 'policy'])->name('policy');

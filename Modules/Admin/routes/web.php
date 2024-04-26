@@ -14,6 +14,7 @@ use Modules\Admin\app\Http\Controllers\PageBannerController;
 use Modules\Admin\app\Http\Controllers\ThemeSettingsController;
 use Modules\Admin\app\Http\Controllers\SliderController;
 use Modules\Admin\app\Http\Controllers\EnquiryController;
+use Modules\Admin\app\Http\Controllers\PolicyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,6 +71,8 @@ Route::prefix('b3-macbis-admin-portal')->group(function () {
         Route::get('enquiry', [EnquiryController::class, 'index'])->name('enquiry.index');
         Route::delete('enquiry/{enquiry}', [EnquiryController::class, 'destroy'])->name('enquiry.destroy');
         Route::get('enquiry/export', [EnquiryController::class, 'export'])->name('enquiry.export');
+        // policy
+        Route::resource('policy', PolicyController::class);
     });
     Route::fallback(function () {
         if (request()->is('b3-macbis-admin-portal/*')) {

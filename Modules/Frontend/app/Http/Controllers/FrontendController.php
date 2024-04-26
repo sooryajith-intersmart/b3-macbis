@@ -9,6 +9,7 @@ use App\Models\Enquiry;
 use App\Models\Home;
 use App\Models\Business;
 use App\Models\Blog;
+use App\Models\Policy;
 use App\Models\Slider;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
@@ -241,5 +242,21 @@ class FrontendController extends Controller
     public function comingSoonB3Visual()
     {
         return view('frontend::frontend.coming-soon-b3-visual');
+    }
+
+    /**
+     * Displays policy page.
+     * 
+     * @author Sooryajith
+     */
+    public function policy($slug)
+    {
+        $policy = Policy::active()->where('slug', $slug)->first();
+
+        if ($policy) {
+            return view('frontend::frontend.policy', compact('policy'));
+        }
+
+        abort(404);
     }
 }

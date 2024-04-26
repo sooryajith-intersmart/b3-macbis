@@ -11,19 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('policies', function (Blueprint $table) {
             $table->id();
-            $table->text('title')->nullable();
-            $table->text('slug')->nullable();
-            $table->longText('description')->nullable();
-            $table->text('thumb_image')->nullable();
-            $table->text('thumb_image_alt_text')->nullable();
-            $table->text('image')->nullable();
-            $table->text('image_alt_text')->nullable();
+            $table->string('title')->nullable();
+            $table->string('slug')->nullable();
+            $table->longText('content')->nullable();
+            $table->string('page_banner_subtitle')->nullable();
+            $table->string('page_banner_title')->nullable();
+            $table->string('page_banner_image')->nullable();
+            $table->string('page_banner_image_alt_text')->nullable();
             $table->text('meta_title')->nullable();
             $table->text('meta_description')->nullable();
             $table->text('meta_keywords')->nullable();
-            $table->date('posted_date')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('policies');
     }
 };

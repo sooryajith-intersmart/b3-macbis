@@ -85,10 +85,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('meta-tag.index') }}" class="nav-link {{ Nav::isRoute(['meta-tag.index', 'meta-tag.edit']) }}">
-                        <i class="nav-icon fas fa-code"></i>
+                    <a href="{{ route('policy.index') }}" class="nav-link {{ Nav::isRoute(['policy.index', 'policy.create', 'policy.edit']) }}">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>
-                            Meta Tags
+                            Policy
                         </p>
                     </a>
                 </li>
@@ -97,6 +97,14 @@
                         <i class="nav-icon fas fa-images"></i>
                         <p>
                             Page Banner
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('meta-tag.index') }}" class="nav-link {{ Nav::isRoute(['meta-tag.index', 'meta-tag.edit']) }}">
+                        <i class="nav-icon fas fa-code"></i>
+                        <p>
+                            Meta Tags
                         </p>
                     </a>
                 </li>
