@@ -431,7 +431,7 @@
                                 <ul>
                                     @foreach($policies as $policy)
                                     <li>
-                                        <a href="{{ route('policy', $policy->slug) }}">{{  $policy->title }}</a>
+                                        <a href="{{ route('policy', $policy->slug) }}">{{ $policy->title }}</a>
                                     </li>
                                     @endforeach
                                 </ul>
