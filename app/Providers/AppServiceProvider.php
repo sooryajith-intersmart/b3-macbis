@@ -48,7 +48,7 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer(['frontend::layouts.*'], function ($view) {
             $blog_exists = Blog::where('status', 1)->exists();
-            $policies = Policy::orderBy('id', 'asc')->all();
+            $policies = Policy::orderBy('id', 'asc')->get();
             $view->with([
                 'blog_exists' => $blog_exists,
                 'policies' => $policies,
