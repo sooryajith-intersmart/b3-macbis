@@ -429,7 +429,7 @@
                             <div class="cmnLinks">
                                 <ul>
                                     <li>
-                                        <a href="javascript:void(0)">Privacy Policy</a>
+                                        <a href="{{ route('policy', 'privacy-policy') }}">Privacy Policy</a>
                                     </li>
                                 </ul>
                             </div>
