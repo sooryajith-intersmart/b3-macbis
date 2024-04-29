@@ -424,17 +424,21 @@
                     <div class="lftSd">
                         <p class="ftTxt">© <?= date('Y') ?> B3. ALL RIGHTS RESERVED.</p>
                     </div>
+                    @if($policies->isNotEmpty())
                     <div class="social">
                         <div class="middleBx">
                             <div class="cmnLinks">
                                 <ul>
+                                    @foreach($policies as $policy)
                                     <li>
-                                        <a href="{{ route('policy', 'privacy-policy') }}">Privacy Policy</a>
+                                        <a href="{{ route('policy', $policy->slug) }}">{{  $policy->title }}</a>
                                     </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    @endif
                     <div class="rgtSd">
                         <p class="ftTxt">DESIGNED BY: <a href="https://www.intersmartsolution.com/" target="_blank">
                                 <span>INTER SMART</span>

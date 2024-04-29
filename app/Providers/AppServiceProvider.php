@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\Policy;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -47,8 +48,10 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer(['frontend::layouts.*'], function ($view) {
             $blog_exists = Blog::where('status', 1)->exists();
+            $policies = Policy::orderBy('id', 'asc')->all();
             $view->with([
-                'blog_exists' => $blog_exists
+                'blog_exists' => $blog_exists,
+                'policies' => $policies,
             ]);
         });
     }
