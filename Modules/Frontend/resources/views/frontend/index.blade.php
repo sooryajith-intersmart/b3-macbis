@@ -440,7 +440,7 @@ $(document).ready(function() {
         gap: 5,
         perMove: 1,
         rewind: false,
-        arrows: false,
+        arrows: true,
         autoplay: true,
         pagination: false,
         breakpoints: {
