@@ -159,9 +159,9 @@ class FrontendController extends Controller
 
         if ($enquiry->save()) {
             Mail::send(new EnquiryMail($enquiry));
-            return redirect()->route('contact')->with('success', 'Thank you for contacting us. We will get back to you as soon as possible.');
+            return redirect()->back()->with('success', 'Thank you for contacting us. We will get back to you as soon as possible.');
         } else {
-            return redirect()->route('contact')->with('error', 'Your application was not submitted.');
+            return redirect()->back()->with('error', 'Your application was not submitted.');
         }
     }
 
